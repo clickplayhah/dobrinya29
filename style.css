@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --pink-light: #F3B3C4;
+}
+
+header {
+    background-color: var(--pink-light);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+}
+
