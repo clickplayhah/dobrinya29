@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 * {
@@ -19,5 +20,45 @@ header {
     max-width: 1024px;
     display: flex;
     justify-content: space-between;
+    padding: 0 16px;
 }
 
+.logo img {
+    vertical-align: middle;
+}
+
+.logo {
+    padding: 0 !important;
+}
+
+.logo span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.container-left {
+    display: flex;
+    align-items: center;
+}
+
+.container-left a {
+    display: inline-block;
+    padding: 25px 0;
+    color: black;
+    text-decoration: none;
+    margin: 0px 10px;
+    line-height: 10px;
+    border: 14px;
+    white-space: nowrap;
+}
+
+
+.container-right a {
+    display: inline-block;
+    color: black;
+    border: 15px;
+    padding: 25px 10px;
+    font-size: 20px;
+
+
+}
