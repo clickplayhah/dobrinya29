@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #ff7000;
+  --black: #1a1a1a;
+  --dark-orange: #e56501;
+  --light-gray: #302e27;
+  --gray: #f2f1ee;
+  --dark-gray: #a39fa6;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+header {
+  background-color: var(--black);
+  padding: 5px 0 0;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+  .container-back {
+    border-top: 1px solid var(--orange);
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    .container-left {
+      display: inline-block;
+      vertical-align: middle;
+
+      .logo {
+        padding: 20px 0;
+        display: block;
+        font-family: "Kaushan Script", cursive;
+        font-weight: 300;
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+      }
+    }
+    .container-right {
+      display: flex;
+      a {
+        display: block;
+        padding: 35px 42px;
+        color: white;
+        text-decoration: none;
+        line-height: 10px;
+        white-space: nowrap;
+        min-width: 158px;
+        text-align: center;
+        border-left: 2px solid #342826;
+
+        &:hover {
+          background-color: var(--orange);
+          box-shadow: 0 4px 0 0 var(--orange);
+          text-shadow: 0 1px rgba(0, 0, 0, 0.6);
+        }
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: var(--black);
+  background-image: url("./img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  padding-top: 65vh;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .item {
+      padding-bottom: 20px;
+
+      .image {
+        border-radius: 300px;
+        overflow: hidden;
+        height: 250px;
+        width: 250px;
+        border: 5px solid white;
+        img {
+          width: 100%;
+        }
+      }
+      .label {
+        color: white;
+        text-align: center;
+        h3 {
+          font-size: 16px;
+          font-weight: normal;
+          margin: 0;
+          padding: 15px 0 10px;
+        }
+        p {
+          color: var(--dark-orange);
+          font-size: 14px;
+          margin: 0;
+          padding: 0 0 10px;
+        }
+        button {
+          background-color: white;
+          border: 1px solid var(--gray);
+          border-radius: 4px;
+          text-transform: uppercase;
+          font-size: 12px;
+          font-weight: bold;
+          padding: 12px 20px;
+          cursor: pointer;
+          &:hover {
+            background-color: var(--orange);
+            color: white;
+            border-color: var(--orange);
+          }
+        }
+      }
+    }
+  }
+}
