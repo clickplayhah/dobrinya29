@@ -1,6 +1,11 @@
 body {
   margin: 0;
   font-family: "Rubik", sans-serif;
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px 60px;
+  background-color: var(--black);
 }
 * {
   box-sizing: border-box;
@@ -67,11 +72,7 @@ header .container .container-right a:first-child {
 }
 .hero {
   background-color: var(--black);
-  background-image: url("img/background.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100%;
-  padding-top: 65vh;
+  margin-top: 85vh;
 }
 .hero .container {
   display: flex;
@@ -79,7 +80,8 @@ header .container .container-right a:first-child {
   justify-content: space-around;
 }
 .hero .container .item {
-  padding-bottom: 20px;
+  padding-bottom: 140px;
+  margin-top: -125px;
 }
 .hero .container .item .image {
   border-radius: 300px;
