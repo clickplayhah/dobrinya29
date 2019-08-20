@@ -19,6 +19,7 @@ body {
   --light-gray: #302e27;
   --gray: #f2f1ee;
   --dark-gray: #a39fa6;
+  --brown: #342826;
 }
 
 .container {
@@ -54,6 +55,12 @@ header {
     }
     .container-right {
       display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li:first-child a {
+        border-left: none;
+      }
       a {
         display: block;
         padding: 35px 42px;
@@ -63,24 +70,55 @@ header {
         white-space: nowrap;
         min-width: 158px;
         text-align: center;
-        border-left: 2px solid #342826;
+        border-left: 2px solid var(--brown);
 
         &:hover {
           background-color: var(--orange);
           box-shadow: 0 4px 0 0 var(--orange);
           text-shadow: 0 1px rgba(0, 0, 0, 0.6);
         }
-        &:first-child {
-          border-left: none;
+      }
+      .drop-down {
+        position: relative;
+        &:hover {
+          ul {
+            display: block;
+          }
+        }
+        ul {
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: 100%;
+          background-color: var(--black);
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: none;
+          li {
+            border-top: 2px solid var(--brown);
+            a {
+              padding: 12px;
+              text-align: left;
+              font-size: 14px;
+              box-shadow: none;
+              i {
+                margin-right: 2px;
+                width: 15px;
+              }
+            }
+          }
         }
       }
     }
   }
 }
-
+.spacer {
+  height: 57vw;
+  max-height: 85vh;
+}
 .hero {
   background-color: var(--black);
-  margin-top: 85vh;
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -98,6 +136,8 @@ header {
         border: 5px solid white;
         img {
           width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
       .label {
