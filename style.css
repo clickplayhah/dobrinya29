@@ -163,3 +163,15 @@ header .container .container-right .drop-down ul li a i {
   color: white;
   border-color: var(--orange);
 }
+.hero-back {
+  background-color: white;
+}
+.hero-back h1 {
+  text-align: center;
+  text-decoration: none;
+}
+.hero-back .container-back {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
