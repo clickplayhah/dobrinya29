@@ -1,11 +1,14 @@
 body {
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   background-image: url("img/background.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 0px 60px;
   background-color: var(--black);
+}
+.text-center {
+  text-align: center;
 }
 * {
   box-sizing: border-box;
@@ -18,6 +21,13 @@ body {
   --gray: #f2f1ee;
   --dark-gray: #a39fa6;
   --brown: #342826;
+}
+.visually-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 .container {
   margin: 0 auto;
@@ -115,10 +125,12 @@ header .container .container-right .drop-down ul li a i {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  position: relative;
+  top: -125px;
+  margin-bottom: -100px;
 }
 .hero .container .item {
-  padding-bottom: 140px;
-  margin-top: -125px;
+  padding-bottom: 70px;
 }
 .hero .container .item .image {
   border-radius: 300px;
@@ -148,9 +160,9 @@ header .container .container-right .drop-down ul li a i {
   margin: 0;
   padding: 0 0 10px;
 }
-.hero .container .item .label button {
+button {
   background-color: white;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--dark-gray);
   border-radius: 4px;
   text-transform: uppercase;
   font-size: 12px;
@@ -158,20 +170,40 @@ header .container .container-right .drop-down ul li a i {
   padding: 12px 20px;
   cursor: pointer;
 }
-.hero .container .item .label button:hover {
+button:hover {
   background-color: var(--orange);
   color: white;
   border-color: var(--orange);
 }
-.hero-back {
+.workflow {
   background-color: white;
+  padding: 0 0 100px 0;
 }
-.hero-back h1 {
+.workflow h2 {
   text-align: center;
   text-decoration: none;
+  padding-top: 100px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 38px;
+  margin: 0 0 40px 0;
 }
-.hero-back .container-back {
+.workflow .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.workflow .container .item {
+  width: 33.33333333%;
+  padding: 30px;
+}
+.workflow .container .item .image {
+  padding: 30px;
+}
+.workflow .container .item .image img {
+  width: 100%;
+}
+.workflow .container .item .label p {
+  font-weight: 400;
+  text-align: center;
 }
