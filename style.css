@@ -95,6 +95,7 @@ header .container .container-right a:hover {
 }
 header .container .container-right .drop-down {
   position: relative;
+  z-index: 2;
 }
 header .container .container-right .drop-down:hover ul {
   display: block;
@@ -220,7 +221,55 @@ h2 {
   width: 33.33333333%;
   padding: 15px;
 }
+.slider {
+  overflow-x: scroll;
+  scroll-padding: 0 50%;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-gray) var(--orange);
+}
+.slider::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+}
+.slider::-webkit-scrollbar,
+.slider::-webkit-scrollbar-track {
+  background-color: var(--dark-gray);
+  height: 5px;
+}
+.slider li {
+  scroll-snap-align: center;
+  display: block;
+  padding: 0 50px 50px;
+}
+.slider img {
+  height: 100%;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.dots li {
+  display: inline-block;
+}
+.dots li a {
+  display: inline-block;
+  background-color: var(--dark-gray);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+.dots li a:hover {
+  background-color: var(--orange);
+}
 @media (max-width: 825px) {
+  body {
+    background-image: none;
+  }
   header .container .container-right {
     flex-direction: column;
   }
