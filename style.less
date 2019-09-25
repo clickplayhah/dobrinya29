@@ -66,6 +66,9 @@ header {
         font-size: 24px;
         color: white;
         text-decoration: none;
+        &:hover {
+          color: var(--orange);
+        }
       }
     }
     .container-right {
@@ -233,6 +236,37 @@ h2 {
     li {
       width: 100%/3;
       padding: 15px;
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  header {
+    .container {
+      .container-right {
+        flex-direction: column;
+        a {
+          border-left: none;
+          padding: 20px 34px;
+        }
+      }
+    }
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .workflow {
+    .container {
+      .item {
+        width: 100%;
+      }
+    }
+  }
+  .about ul {
+    padding: 0 15px 0 28px;
+    li {
+      width: 100%;
     }
   }
 }
