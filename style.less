@@ -352,7 +352,7 @@ h2 {
     color: var(--black);
     text-decoration: none;
     &:hover {
-      color: var(--orange)
+      color: var(--orange);
     }
   }
 }
@@ -360,22 +360,47 @@ footer {
   background-color: var(--black);
   padding: 5px 0 0;
   box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
-  .container-left {
-    display: inline-block;
-    vertical-align: middle;
 
-    .logo {
-      padding: 20px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    .container-left {
+      display: inline-block;
+      vertical-align: middle;
+
+      .logo {
+        padding: 35px 0;
+        display: block;
+        font-family: "Kaushan Script", cursive;
+        font-weight: 300;
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+        &:hover {
+          color: var(--orange);
+        }
+      }
+    }
+
+    .container-right {
+      display: flex;
+      margin: 30px;
+      padding: 0;
+    }
+    a {
       display: block;
-      font-family: "Kaushan Script", cursive;
-      font-weight: 300;
-      font-size: 24px;
+      padding: 20px;
       color: white;
       text-decoration: none;
-      position: left;
+      text-align: center;
       &:hover {
-        color: var(--orange);
+        color: var(--orange)
       }
+    }
+    li {
+      list-style: none;
     }
   }
 }

@@ -330,20 +330,42 @@ footer {
   padding: 5px 0 0;
   box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
 }
-footer .container-left {
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+footer .container .container-left {
   display: inline-block;
   vertical-align: middle;
 }
-footer .container-left .logo {
-  padding: 20px 0;
+footer .container .container-left .logo {
+  padding: 35px 0;
   display: block;
   font-family: "Kaushan Script", cursive;
   font-weight: 300;
   font-size: 24px;
   color: white;
   text-decoration: none;
-  position: left;
 }
-footer .container-left .logo:hover {
+footer .container .container-left .logo:hover {
   color: var(--orange);
+}
+footer .container .container-right {
+  display: flex;
+  margin: 30px;
+  padding: 0;
+}
+footer .container a {
+  display: block;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+footer .container a:hover {
+  color: var(--orange);
+}
+footer .container li {
+  list-style: none;
 }
