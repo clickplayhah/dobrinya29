@@ -24,11 +24,11 @@
             <a href="" class="logo">Dobrinya 29</a>
           </div>
           <menu class="container-right">
-            <li><a href="#rtyu">Каталог</a></li>
-            <li><a href="">Как заказать</a></li>
-            <li><a href="">О мишках</a></li>
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#order">Как заказать</a></li>
+            <li><a href="#about">О мишках</a></li>
             <li class="drop-down">
-              <a href="">Контакты</a>
+              <a href="#contacts">Контакты</a>
               <ul>
                 <li>
                   <a
@@ -46,6 +46,11 @@
                   </a>
                 </li>
                 <li>
+                  <a href="https://wa.me/79600135345" rel="noreferrer">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                  </a>
+                </li>
+                <li>
                   <a href="tel:+79600135345">
                     <i class="fas fa-phone"></i>
                     +7 (960) 013-53-45
@@ -59,7 +64,7 @@
     </header>
     <h1 class="visually-hidden">Добрыня 29</h1>
     <div class="spacer"></div>
-    <section class="hero">
+    <section class="hero" id="catalog">
       <div class="container">
         <div class="item">
           <div class="image">
@@ -68,7 +73,7 @@
           <div class="label">
             <h3>Мишка 110см</h3>
             <p>1990 &#8381;</p>
-            <button>Выбрать</button>
+            <button data-dialog-open="submit">Выбрать</button>
           </div>
         </div>
         <div class="item">
@@ -78,7 +83,7 @@
           <div class="label">
             <h3>Мишка 130см</h3>
             <p>3490 &#8381;</p>
-            <button>Выбрать</button>
+            <button data-dialog-open="submit">Выбрать</button>
           </div>
         </div>
         <div class="item">
@@ -88,7 +93,7 @@
           <div class="label">
             <h3>Мишка 140см</h3>
             <p>3690 &#8381;</p>
-            <button>Выбрать</button>
+            <button data-dialog-open="submit">Выбрать</button>
           </div>
         </div>
         <div class="item">
@@ -98,7 +103,7 @@
           <div class="label">
             <h3>Мишка 170см</h3>
             <p>4690 &#8381;</p>
-            <button>Выбрать</button>
+            <button data-dialog-open="submit">Выбрать</button>
           </div>
         </div>
         <div class="item">
@@ -108,7 +113,7 @@
           <div class="label">
             <h3>Мишка 195см</h3>
             <p>6690 &#8381;</p>
-            <button>Выбрать</button>
+            <button data-dialog-open="submit">Выбрать</button>
           </div>
         </div>
         <div class="item">
@@ -118,12 +123,12 @@
           <div class="label">
             <h3>Мишка 220см</h3>
             <p>7490 &#8381;</p>
-            <button>Выбрать</button>
+            <button data-dialog-open="submit">Выбрать</button>
           </div>
         </div>
       </div>
     </section>
-    <section class="workflow">
+    <section class="workflow" id="order">
       <h2>Как заказать мишку</h2>
       <div class="container">
         <div class="item">
@@ -158,10 +163,10 @@
         </div>
       </div>
       <div class="text-center">
-        <button>Оставить заявку</button>
+        <button data-dialog-open="submit">Оставить заявку</button>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <h2>О мишках</h2>
 
       <ul class="container">
@@ -211,7 +216,7 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section id="revievs">
       <h2>Отзывы</h2>
       <ul class="slider">
         <li><img src="./img/rev/1.jpg" alt="" id="slide1" /></li>
@@ -236,7 +241,7 @@
         <li><a href="#slide9"></a></li>
       </ul>
     </section>
-    <section class="answers">
+    <section class="answers" id="answers">
       <h2>Ответы на ваши вопросы</h2>
       <ul class="container">
         <li>
@@ -293,7 +298,7 @@
         </li>
       </ul>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <h2>Наши контакты</h2>
       <ul class="container">
         <li>
@@ -322,48 +327,63 @@
         ></script>
       </div>
     </section>
-  </body>
-  <footer>
-    <div class="container">
-      <div class="block">
-        <a href="" class="logo">Dobrinya 29</a>
+
+    <footer>
+      <div class="container">
+        <div class="block">
+          <a href="" class="logo">Dobrinya 29</a>
+        </div>
+        <menu class="block">
+          <li><a href="#catalog">Выбрать мишку</a></li>
+          <li><a href="#order">Как заказать</a></li>
+          <li><a href="#about">О мишках</a></li>
+          <li><a href="#revievs">Отзывы</a></li>
+          <li><a href="#answers">Ответы на вопросы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </menu>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/dobrinya29/" target="_blank">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://vk.com/dobrinya29" target="_blank">
+              Вконтакте
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/79600135345" rel="noreferrer"> WhatsApp </a>
+          </li>
+          <li>
+            <a href="tel:+79600135345">
+              +7 (960) 013-53-45
+            </a>
+          </li>
+        </ul>
       </div>
-      <menu class="block">
-        <li><a href="#rtyu">Выбрать мишку</a></li>
-        <li><a href="">Как заказать</a></li>
-        <li><a href="">О мишках</a></li>
-        <li><a href="">Отзывы</a></li>
-        <li><a href="">Ответы на вопросы</a></li>
-        <li><a href="">Контакты</a></li>
-      </menu>
-      <ul>
-        <li>
-          <a href="https://www.instagram.com/dobrinya29/" target="_blank">
-            Instagram
-          </a>
-        </li>
-        <li>
-          <a href="https://vk.com/dobrinya29" target="_blank">
-            Вконтакте
-          </a>
-        </li>
-        <li>
-          <a href="https://wa.me/79600135345" rel="noreferrer"> WhatsApp </a>
-        </li>
-        <li>
-          <a href="tg://resolve?domain=79600135345" rel="noreferrer">
-            Telegram
-          </a>
-        </li>
-        <li>
-          <a href="viber://chat?number=79600135345" rel="noreferrer"> Viber </a>
-        </li>
-        <li>
-          <a href="tel:+79600135345">
-            +7 (960) 013-53-45
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
+    </footer>
+    <dialog id="submit">
+      <button data-dialog-close="submit" class="close"></button>
+
+      <h2>Напишите нам</h2>
+      <p>и мы свяжемся с вами в течении 15 минут</p>
+      <form action="">
+        <label>
+          Имя
+          <input type="text" name="name" />
+        </label>
+        <label>
+          Телефон
+          <input type="phone" name="phone" />
+        </label>
+        <label>
+          Комментарий к заказу
+          <textarea name="comment"></textarea>
+        </label>
+        <button type="submit">Отправить!</button>
+      </form>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
 </html>
