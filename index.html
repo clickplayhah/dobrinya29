@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ДОБРЫНЯ29</title>
+
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -13,6 +14,10 @@
     <link
       href="https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto+Condensed:300,400,700&display=swap&subset=cyrillic"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css"
     />
   </head>
 
@@ -73,7 +78,7 @@
           <div class="label">
             <h3>Мишка 110см</h3>
             <p>1990 &#8381;</p>
-            <button data-dialog-open="submit">Выбрать</button>
+            <button data-open-modal="modal1">Выбрать</button>
           </div>
         </div>
         <div class="item">
@@ -83,7 +88,7 @@
           <div class="label">
             <h3>Мишка 130см</h3>
             <p>3490 &#8381;</p>
-            <button data-dialog-open="submit">Выбрать</button>
+            <button data-open-modal="modal1">Выбрать</button>
           </div>
         </div>
         <div class="item">
@@ -93,7 +98,7 @@
           <div class="label">
             <h3>Мишка 140см</h3>
             <p>3690 &#8381;</p>
-            <button data-dialog-open="submit">Выбрать</button>
+            <button data-open-modal="modal1">Выбрать</button>
           </div>
         </div>
         <div class="item">
@@ -103,7 +108,7 @@
           <div class="label">
             <h3>Мишка 170см</h3>
             <p>4690 &#8381;</p>
-            <button data-dialog-open="submit">Выбрать</button>
+            <button data-open-modal="modal1">Выбрать</button>
           </div>
         </div>
         <div class="item">
@@ -113,7 +118,7 @@
           <div class="label">
             <h3>Мишка 195см</h3>
             <p>6690 &#8381;</p>
-            <button data-dialog-open="submit">Выбрать</button>
+            <button data-open-modal="modal1">Выбрать</button>
           </div>
         </div>
         <div class="item">
@@ -123,7 +128,7 @@
           <div class="label">
             <h3>Мишка 220см</h3>
             <p>7490 &#8381;</p>
-            <button data-dialog-open="submit">Выбрать</button>
+            <button data-open-modal="modal1">Выбрать</button>
           </div>
         </div>
       </div>
@@ -163,7 +168,7 @@
         </div>
       </div>
       <div class="text-center">
-        <button data-dialog-open="submit">Оставить заявку</button>
+        <button data-open-modal="modal1">Оставить заявку</button>
       </div>
     </section>
     <section class="about" id="about">
@@ -216,7 +221,7 @@
         </li>
       </ul>
     </section>
-    <section id="revievs">
+    <section id="revievs" class="reviews">
       <h2>Отзывы</h2>
       <ul class="slider">
         <li><img src="./img/rev/1.jpg" alt="" id="slide1" /></li>
@@ -228,17 +233,6 @@
         <li><img src="./img/rev/7.jpg" alt="" id="slide7" /></li>
         <li><img src="./img/rev/8.jpg" alt="" id="slide8" /></li>
         <li><img src="./img/rev/9.jpg" alt="" id="slide9" /></li>
-      </ul>
-      <ul class="dots">
-        <li><a href="#slide1"></a></li>
-        <li><a href="#slide2"></a></li>
-        <li><a href="#slide3"></a></li>
-        <li><a href="#slide4"></a></li>
-        <li><a href="#slide5"></a></li>
-        <li><a href="#slide6"></a></li>
-        <li><a href="#slide7"></a></li>
-        <li><a href="#slide8"></a></li>
-        <li><a href="#slide9"></a></li>
       </ul>
     </section>
     <section class="answers" id="answers">
@@ -363,27 +357,36 @@
         </ul>
       </div>
     </footer>
-    <dialog id="submit">
-      <button data-dialog-close="submit" class="close"></button>
 
-      <h2>Напишите нам</h2>
-      <p>и мы свяжемся с вами в течении 15 минут</p>
-      <form action="">
-        <label>
-          Имя
-          <input type="text" name="name" />
-        </label>
-        <label>
-          Телефон
-          <input type="phone" name="phone" />
-        </label>
-        <label>
-          Комментарий к заказу
-          <textarea name="comment"></textarea>
-        </label>
-        <button type="submit">Отправить!</button>
-      </form>
-    </dialog>
+    <div class="modal" data-modal="modal1">
+      <div class="dialog">
+        <button
+          class="dialog-close"
+          data-close-modal
+          aria-label="Close modal"
+        ></button>
+        <section class="dialog-content">
+          <h2>Напишите нам</h2>
+          <p>и мы свяжемся с вами в течении 15 минут</p>
+          <form action="">
+            <label>
+              Имя
+              <input type="text" name="name" />
+            </label>
+            <label>
+              Телефон
+              <input type="phone" name="phone" />
+            </label>
+            <label>
+              Комментарий к заказу
+              <textarea name="comment"></textarea>
+            </label>
+            <button type="submit">Отправить!</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
