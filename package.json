@@ -1,0 +1,22 @@
+{
+  "name": "dobrinya29",
+  "version": "1.0.0",
+  "description": "* favicon;\r * SEO (meta, open graph);\r * ESNEXT -> ES5;\r * по нажатию на \"Выбрать\", дополнять комментарий в форме;\r * выбор цвета медведя;",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clickplayhah/dobrinya29.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clickplayhah/dobrinya29/issues"
+  },
+  "homepage": "https://github.com/clickplayhah/dobrinya29#readme",
+  "dependencies": {
+    "tiny-slider": "^2.9.2"
+  }
+}
