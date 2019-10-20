@@ -132,17 +132,25 @@ class Modal {
     items: 1,
     controls: false,
     navPosition: 'bottom',
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplayButtonOutput: false,
+    mouseDrag: true,
     responsive: {
-      640: {
-        edgePadding: 20,
-        gutter: 20,
+      600: {
         items: 2
       },
-      700: {
-        gutter: 30
-      },
-      900: {
+      1000: {
         items: 3
+      },
+      1400: {
+        items: 4
+      },
+      1800: {
+        items: 5
+      },
+      2200: {
+        items: 6
       }
     }
   });
