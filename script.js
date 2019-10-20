@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var tiny_slider_1 = require("./node_modules/tiny-slider/src/tiny-slider");
 var global = {
     lastFocus: null,
     returnFocus: function () {
@@ -135,7 +133,8 @@ var Modal = /** @class */ (function () {
             error();
         }
     });
-    var slider = tiny_slider_1.tns({
+    // @ts-ignore
+    var slider = tns({
         container: '.slider',
         items: 1,
         controls: false,

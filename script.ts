@@ -1,5 +1,3 @@
-import { tns } from './node_modules/tiny-slider/src/tiny-slider';
-
 const global: {
   lastFocus: HTMLElement | null;
   returnFocus: () => void;
@@ -154,6 +152,7 @@ class Modal {
     }
   });
 
+  // @ts-ignore
   const slider = tns({
     container: '.slider',
     items: 1,
