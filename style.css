@@ -326,6 +326,9 @@ h2 {
   width: 20px;
   margin: 5px;
 }
+.reviews .tns-nav button.tns-nav-active {
+  background-color: var(--orange);
+}
 @media (max-width: 825px) {
   body {
     background-image: none;
