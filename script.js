@@ -86,8 +86,9 @@ class Modal {
   const form = document.forms.form;
   form.addEventListener('submit', event => {
     event.preventDefault();
+
     const message = `${form.elements.name.value} (${form.elements.phone.value})\n ${form.elements.comment.value}`;
-    const url = 'https://dobrinya29bot.herokuapp.com/';
+    const url = 'https://dobrinya29bot.herokuapp.com/?message=' + encodeURI(message);
 
     const error = () => {
       modals.forEach(modal => {
@@ -112,12 +113,7 @@ class Modal {
     };
 
     try {
-      fetch({
-        method: 'POST',
-        body: {
-          message: message
-        }
-      })
+      fetch(url)
         .then(resp => resp.json())
         .then(resp => {
           if (resp && resp.status === 'OK') {
