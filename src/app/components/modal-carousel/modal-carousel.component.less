@@ -1,0 +1,66 @@
+:host {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  .slider-container {
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin-bottom: -20px;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    .slider {
+      padding: 0 0 20px;
+      margin: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      ::ng-deep {
+        li {
+          width: 100%;
+          scroll-snap-align: center;
+        }
+      }
+    }
+  }
+  .slider-prev,
+  .slider-next {
+    position: absolute;
+    top: 50%;
+    margin: -50px 0 0;
+    border: none;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    background: none;
+    text-align: center;
+    &::before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+    }
+    &:hover,
+    &:focus {
+      &::before {
+        border-color: var(--orange);
+      }
+    }
+  }
+  .slider-prev {
+    left: 0;
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+  .slider-next {
+    right: 0;
+    &::before {
+      transform: rotate(225deg);
+    }
+  }
+}
