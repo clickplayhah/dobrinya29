@@ -58,9 +58,9 @@ export class AppComponent {
     this.reviewsCount = Math.floor(window.innerWidth / 300);
   }
 
-  submitForm() {
-    if (this.form.valid) {
-      const formValue: { name: string; phone: string; comment: string } = this.form.value;
+  submitForm(form: FormGroup) {
+    if (form.valid) {
+      const formValue: { name: string; phone: string; comment: string } = form.value;
       this.dataService.sendForm(formValue.name, formValue.phone, formValue.comment).subscribe(resp => {
         if (resp && resp.status === 'OK') {
           this.modalComponent.type = 'success';
@@ -73,8 +73,8 @@ export class AppComponent {
         }
       });
     } else {
-      this.form.controls.name.markAsDirty();
-      this.form.controls.phone.markAsDirty();
+      form.controls.name.markAsDirty();
+      form.controls.phone.markAsDirty();
     }
   }
 }

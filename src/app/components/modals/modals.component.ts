@@ -1,4 +1,6 @@
 import { Component, Input, ViewChild, Output, EventEmitter } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { Bear } from 'src/app/services/data.service.service';
 
 @Component({
   selector: 'app-modals',
@@ -7,7 +9,7 @@ import { Component, Input, ViewChild, Output, EventEmitter } from '@angular/core
 })
 export class ModalsComponent {
   @Input() type: 'form' | 'success' | 'error' | 'select' | null;
-  @Input() data = {};
+  @Input() data: FormGroup | Bear | any = {};
   @ViewChild('modal', { static: false }) modal;
   @Output() selectBear: EventEmitter<any> = new EventEmitter();
   @Output() sendForm: EventEmitter<any> = new EventEmitter();
