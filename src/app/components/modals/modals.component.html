@@ -21,7 +21,7 @@
           <input
             type="tel"
             formControlName="phone"
-            minlength="10" 
+            minlength="10"
             [ngClass]="{ invalid: data.controls.phone.dirty && data.controls.phone.invalid }"
           />
         </label>
@@ -72,7 +72,7 @@
       <h2>{{ data.name }} - {{ data.size }}см</h2>
       <app-modal-carousel class="carousel">
         <li *ngFor="let color of data.colors">
-          <img src="../../../assets/img/Медведи/{{ data.name }}-{{ data.size }}/{{ color }}.jpg" alt="" />
+          <img src="assets/img/Медведи/{{ data.name }}-{{ data.size }}/{{ color }}.jpg" alt="" />
           <p>{{ color }}</p>
           <button (click)="selectBearColor(color)">Выбрать</button>
         </li>
