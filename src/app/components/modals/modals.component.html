@@ -5,7 +5,7 @@
     <section class="dialog-content" *ngIf="type === 'form'">
       <h2>Напишите нам</h2>
       <p>и мы свяжемся с вами в течении 15 минут</p>
-      <form [formGroup]="data" (ngSubmit)="submitForm()">
+      <form [formGroup]="data" (ngSubmit)="submitForm(); disableSubmitButton=true;">
         <label>
           Ваше имя *
           <input
@@ -29,7 +29,7 @@
           Комментарий к заказу
           <textarea formControlName="comment"></textarea>
         </label>
-        <button type="submit">Отправить!</button>
+        <button type="submit" [disabled]="data.invalid || disableSubmitButton">Отправить!</button>
       </form>
     </section>
 

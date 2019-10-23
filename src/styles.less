@@ -141,7 +141,7 @@ header {
 }
 
 .spacer {
-  height: 57vw;
+  height: 56vw;
   max-height: 85vh;
 }
 
@@ -211,6 +211,12 @@ button {
     background-color: var(--orange);
     color: white;
     border-color: var(--orange);
+  }
+  &:disabled{
+    background-color: gray;
+    border-color: gray;
+    color: white;
+    cursor: default;
   }
 }
 
@@ -408,8 +414,11 @@ footer {
 }
 
 @media (max-width: 825px) {
-  body {
+  .page {
     background-image: none;
+  }
+  .spacer{
+    background-color: var(--black);
   }
   header {
     .container {

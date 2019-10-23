@@ -12,12 +12,13 @@ export class AppComponent {
   public title = 'Dobrinya29';
   public bears: Bear[] = [];
   public reviewsCount = 1;
+  public disableSubmitButton = false;
   @ViewChild('modal', { static: false }) modalComponent: ModalsComponent;
 
   private form: FormGroup;
 
   constructor(private dataService: DataService, private formBuilder: FormBuilder) {
-    console.log(this);
+
     this.dataService.getData();
     this.bears = this.dataService.bears;
     this.getCountOfReviews();
