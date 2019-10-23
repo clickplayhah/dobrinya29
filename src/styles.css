@@ -1,12 +1,3 @@
-:root {
-  --orange: #ff7000;
-  --black: #1a1a1a;
-  --dark-orange: #e56501;
-  --light-gray: #302e27;
-  --gray: #f2f1ee;
-  --dark-gray: #a39fa6;
-  --brown: #342826;
-}
 * {
   box-sizing: border-box;
 }
@@ -24,7 +15,7 @@ body {
 section {
   background-color: white;
   padding: 0 0 100px 0;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid #f2f1ee;
 }
 .text-center {
   text-align: center;
@@ -54,15 +45,15 @@ section {
   text-decoration: none;
 }
 .logo:hover {
-  color: var(--orange);
+  color: #ff7000;
 }
 header {
-  background-color: var(--black);
+  background-color: #1a1a1a;
   padding: 5px 0 0;
   box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
 }
 header .container-back {
-  border-top: 1px solid var(--orange);
+  border-top: 1px solid #ff7000;
 }
 header .container {
   padding: 0 16px;
@@ -89,11 +80,11 @@ header .container .container-right a {
   white-space: nowrap;
   min-width: 158px;
   text-align: center;
-  border-left: 2px solid var(--brown);
+  border-left: 2px solid #342826;
 }
 header .container .container-right a:hover {
-  background-color: var(--orange);
-  box-shadow: 0 4px 0 0 var(--orange);
+  background-color: #ff7000;
+  box-shadow: 0 4px 0 0 #ff7000;
   text-shadow: 0 1px rgba(0, 0, 0, 0.6);
 }
 header .container .container-right .drop-down {
@@ -108,14 +99,14 @@ header .container .container-right .drop-down ul {
   right: 0;
   left: 0;
   top: 100%;
-  background-color: var(--black);
+  background-color: #1a1a1a;
   list-style: none;
   padding: 0;
   margin: 0;
   display: none;
 }
 header .container .container-right .drop-down ul li {
-  border-top: 2px solid var(--brown);
+  border-top: 2px solid #342826;
 }
 header .container .container-right .drop-down ul li a {
   padding: 12px;
@@ -132,7 +123,7 @@ header .container .container-right .drop-down ul li a i {
   max-height: 85vh;
 }
 .hero {
-  background-color: var(--black);
+  background-color: #1a1a1a;
   padding: 0;
 }
 .hero .container {
@@ -156,7 +147,7 @@ header .container .container-right .drop-down ul li a i {
 }
 .hero .container .item .image:hover,
 .hero .container .item .image:focus {
-  border-color: var(--orange);
+  border-color: #ff7000;
 }
 .hero .container .item .image img {
   width: 100%;
@@ -174,14 +165,14 @@ header .container .container-right .drop-down ul li a i {
   padding: 15px 0 10px;
 }
 .hero .container .item .label p {
-  color: var(--dark-orange);
+  color: #e56501;
   font-size: 14px;
   margin: 0;
   padding: 0 0 10px;
 }
 button {
   background-color: white;
-  border: 1px solid var(--dark-gray);
+  border: 1px solid #a39fa6;
   border-radius: 4px;
   text-transform: uppercase;
   font-size: 12px;
@@ -192,9 +183,9 @@ button {
 }
 button:hover,
 button:focus {
-  background-color: var(--orange);
+  background-color: #ff7000;
   color: white;
-  border-color: var(--orange);
+  border-color: #ff7000;
 }
 button:disabled {
   background-color: gray;
@@ -258,7 +249,7 @@ h2 {
   margin: 5px;
 }
 .reviews .tns-nav button.tns-nav-active {
-  background-color: var(--orange);
+  background-color: #ff7000;
 }
 .answers h3 {
   font-weight: 300;
@@ -271,9 +262,6 @@ h2 {
 .answers ul li {
   width: 33.33333333%;
   padding: 15px;
-}
-.contacts {
-  padding: 0;
 }
 .contacts h3 {
   font-weight: 300;
@@ -290,14 +278,14 @@ h2 {
   text-align: center;
 }
 .contacts a {
-  color: var(--black);
+  color: #1a1a1a;
   text-decoration: none;
 }
 .contacts a:hover {
-  color: var(--orange);
+  color: #ff7000;
 }
 footer {
-  background-color: var(--black);
+  background-color: #1a1a1a;
   padding: 5px 0 0;
   box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
   color: white;
@@ -307,7 +295,7 @@ footer a {
   text-decoration: none;
 }
 footer a:hover {
-  color: var(--orange);
+  color: #ff7000;
 }
 footer menu,
 footer ul {
@@ -355,7 +343,7 @@ footer ul li {
   display: block;
   background-color: rgba(0, 0, 0, 0);
   color: inherit;
-  border: 1px solid var(--black);
+  border: 1px solid #1a1a1a;
   outline: none;
   width: 100%;
   font-size: 18px;
@@ -370,7 +358,7 @@ footer ul li {
 .modal form textarea:hover,
 .modal form input:focus,
 .modal form textarea:focus {
-  border-color: var(--orange);
+  border-color: #ff7000;
 }
 .modal form input.invalid,
 .modal form textarea.invalid,
@@ -383,7 +371,7 @@ footer ul li {
     background-image: none;
   }
   .spacer {
-    background-color: var(--black);
+    background-color: #1a1a1a;
   }
   header .container .container-right {
     flex-direction: column;
@@ -407,6 +395,9 @@ footer ul li {
   }
   .answers ul li {
     width: 100%;
+  }
+  .contacts {
+    padding: 0;
   }
   .contacts ul {
     list-style: none;

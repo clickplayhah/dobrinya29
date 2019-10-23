@@ -12,7 +12,6 @@ export class AppComponent {
   public title = 'Dobrinya29';
   public bears: Bear[] = [];
   public reviewsCount = 1;
-  public disableSubmitButton = false;
   @ViewChild('modal', { static: false }) modalComponent: ModalsComponent;
 
   private form: FormGroup;

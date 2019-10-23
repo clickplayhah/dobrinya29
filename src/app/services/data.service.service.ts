@@ -17,7 +17,7 @@ export class DataService {
     const data = localStorage.getItem('bears');
     if (data) {
       const parsed = JSON.parse(data);
-      if (Date.now() - parsed.time > 1000 * 60 * 60 * 24 * 3) {
+      if (Date.now() - parsed.time > 1000 * 60 * 60 * 24 * 1) {
         localStorage.removeItem('bears');
         return null;
       } else {

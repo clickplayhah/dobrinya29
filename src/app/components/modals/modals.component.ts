@@ -14,6 +14,7 @@ export class ModalsComponent {
   @Output() selectBear: EventEmitter<any> = new EventEmitter();
   @Output() sendForm: EventEmitter<any> = new EventEmitter();
   public opened = false;
+  public disableSubmitButton = false;
   private focusedElement: HTMLElement;
   constructor() {}
 

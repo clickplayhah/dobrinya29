@@ -1,12 +1,4 @@
-:root {
-  --orange: #ff7000;
-  --black: #1a1a1a;
-  --dark-orange: #e56501;
-  --light-gray: #302e27;
-  --gray: #f2f1ee;
-  --dark-gray: #a39fa6;
-  --brown: #342826;
-}
+@import 'colors.less';
 
 * {
   box-sizing: border-box;
@@ -27,7 +19,7 @@ body {
 section {
   background-color: white;
   padding: 0 0 100px 0;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid @gray;
 }
 
 .text-center {
@@ -60,16 +52,16 @@ section {
   color: white;
   text-decoration: none;
   &:hover {
-    color: var(--orange);
+    color: @orange;
   }
 }
 
 header {
-  background-color: var(--black);
+  background-color: @black;
   padding: 5px 0 0;
   box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
   .container-back {
-    border-top: 1px solid var(--orange);
+    border-top: 1px solid @orange;
   }
   .container {
     padding: 0 16px;
@@ -95,11 +87,11 @@ header {
         white-space: nowrap;
         min-width: 158px;
         text-align: center;
-        border-left: 2px solid var(--brown);
+        border-left: 2px solid @brown;
 
         &:hover {
-          background-color: var(--orange);
-          box-shadow: 0 4px 0 0 var(--orange);
+          background-color: @orange;
+          box-shadow: 0 4px 0 0 @orange;
           text-shadow: 0 1px rgba(0, 0, 0, 0.6);
         }
       }
@@ -116,13 +108,13 @@ header {
           right: 0;
           left: 0;
           top: 100%;
-          background-color: var(--black);
+          background-color: @black;
           list-style: none;
           padding: 0;
           margin: 0;
           display: none;
           li {
-            border-top: 2px solid var(--brown);
+            border-top: 2px solid @brown;
             a {
               padding: 12px;
               text-align: left;
@@ -146,7 +138,7 @@ header {
 }
 
 .hero {
-  background-color: var(--black);
+  background-color: @black;
   padding: 0;
   .container {
     display: flex;
@@ -167,7 +159,7 @@ header {
         padding: 0;
         &:hover,
         &:focus {
-          border-color: var(--orange);
+          border-color: @orange;
         }
 
         img {
@@ -186,7 +178,7 @@ header {
           padding: 15px 0 10px;
         }
         p {
-          color: var(--dark-orange);
+          color: @dark-orange;
           font-size: 14px;
           margin: 0;
           padding: 0 0 10px;
@@ -198,7 +190,7 @@ header {
 
 button {
   background-color: white;
-  border: 1px solid var(--dark-gray);
+  border: 1px solid @dark-gray;
   border-radius: 4px;
   text-transform: uppercase;
   font-size: 12px;
@@ -208,11 +200,11 @@ button {
   cursor: pointer;
   &:hover,
   &:focus {
-    background-color: var(--orange);
+    background-color: @orange;
     color: white;
-    border-color: var(--orange);
+    border-color: @orange;
   }
-  &:disabled{
+  &:disabled {
     background-color: gray;
     border-color: gray;
     color: white;
@@ -289,7 +281,7 @@ h2 {
       width: 20px;
       margin: 5px;
       &.tns-nav-active {
-        background-color: var(--orange);
+        background-color: @orange;
       }
     }
   }
@@ -311,7 +303,6 @@ h2 {
 }
 
 .contacts {
-  padding: 0;
   h3 {
     font-weight: 300;
     font-size: 20px;
@@ -327,16 +318,16 @@ h2 {
     }
   }
   a {
-    color: var(--black);
+    color: @black;
     text-decoration: none;
     &:hover {
-      color: var(--orange);
+      color: @orange;
     }
   }
 }
 
 footer {
-  background-color: var(--black);
+  background-color: @black;
   padding: 5px 0 0;
   box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
   color: white;
@@ -344,7 +335,7 @@ footer {
     color: inherit;
     text-decoration: none;
     &:hover {
-      color: var(--orange);
+      color: @orange;
     }
   }
   menu,
@@ -391,7 +382,7 @@ footer {
       display: block;
       background-color: rgba(0, 0, 0, 0);
       color: inherit;
-      border: 1px solid var(--black);
+      border: 1px solid @black;
       outline: none;
       width: 100%;
       font-size: 18px;
@@ -403,7 +394,7 @@ footer {
       min-height: 34px;
       &:hover,
       &:focus {
-        border-color: var(--orange);
+        border-color: @orange;
       }
       &.invalid,
       &:invalid {
@@ -417,8 +408,8 @@ footer {
   .page {
     background-image: none;
   }
-  .spacer{
-    background-color: var(--black);
+  .spacer {
+    background-color: @black;
   }
   header {
     .container {
@@ -431,7 +422,6 @@ footer {
       }
     }
   }
-
   .container {
     flex-direction: column;
     align-items: center;
@@ -459,6 +449,7 @@ footer {
     }
   }
   .contacts {
+    padding: 0;
     ul {
       list-style: none;
       li {
