@@ -10,7 +10,6 @@ export class ModalCarouselComponent {
   @Input() slides = 1;
   @ViewChild('container', { static: false }) container: ElementRef;
   constructor() {
-    console.log(this);
   }
 
   prev() {

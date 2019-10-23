@@ -6,7 +6,7 @@ import { ModalsComponent } from './components/modals/modals.component';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   public title = 'Dobrinya29';
@@ -17,14 +17,14 @@ export class AppComponent {
   private form: FormGroup;
 
   constructor(private dataService: DataService, private formBuilder: FormBuilder) {
-
     this.dataService.getData();
     this.bears = this.dataService.bears;
     this.getCountOfReviews();
+
     this.form = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       phone: ['+7', [Validators.required, Validators.minLength(10)]],
-      comment: [''],
+      comment: ['']
     });
   }
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class DataService {
   public bears: Bear[] = [];
@@ -37,7 +37,7 @@ export class DataService {
     const bears = new Map<string, Bear>();
     this.httpClient
       .get(
-        'https://spreadsheets.google.com/feeds/cells/1p5WKcp-MLDr-33Li1lTk1i2y8MErnv1Wjk41HrkQQXE/1/public/full?alt=json',
+        'https://spreadsheets.google.com/feeds/cells/1p5WKcp-MLDr-33Li1lTk1i2y8MErnv1Wjk41HrkQQXE/1/public/full?alt=json'
       )
       .subscribe((resp: Response) => {
         resp.feed.entry.forEach(ent => {
@@ -50,7 +50,7 @@ export class DataService {
                 size: '',
                 name: '',
                 colors: [],
-                price: '',
+                price: ''
               };
               bears.set(ent.gs$cell.row, bear);
             }
