@@ -3,6 +3,10 @@
 ## TODO:
 * SEO (meta, open graph);
 * нежные цвета, другая главная картинка; 
+* редизайн
+* убрать ангуляр
+* https://robinparisi.github.io/tingle/
+* https://github.com/glidejs/glide
 
 ## Development server
 
