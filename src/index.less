@@ -4,11 +4,14 @@
 @crema-200: #fdcdb5;
 @brown: #996533;
 @brown-dark: #6c3b00;
+@purple: #4c18a0;
+@purple-light: #9756ff;
 
 @bg-red: rgba(255, 217, 217, 1);
 @bg-yellow: rgba(255, 254, 127, 1);
 @bg-blue: rgba(167, 246, 255, 1);
 
+@shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 * {
   box-sizing: border-box;
 }
@@ -29,9 +32,9 @@ body {
 }
 
 button {
-  background: linear-gradient(135deg, @bg-red 0%, @bg-yellow 50%, @bg-yellow 50%, @bg-blue 100%);
+  background: @purple-light;
   border: none;
-  color: black;
+  color: white;
   border-radius: 40px;
   text-transform: uppercase;
   font-size: 12px;
@@ -40,11 +43,12 @@ button {
   min-width: 200px;
   outline: none;
   transition: all 150ms linear;
+  font-size: 1em;
   cursor: pointer;
   &:hover,
   &:focus {
-    background: linear-gradient(135deg, @bg-red 0%, @bg-yellow 30%, @bg-yellow 70%, @bg-blue 100%);
-    box-shadow: 0 0 20px 0 @bg-yellow;
+    background: @purple;
+    box-shadow: 0 0 20px 0 @bg-blue;
   }
   &:disabled {
     background-color: gray;
@@ -64,20 +68,21 @@ ol {
 h1,
 h2,
 h3 {
+  font-family: 'Amatic SC', cursive;
   text-align: center;
   text-decoration: none;
-  padding-top: 100px;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 50px;
   margin: 2em 0;
+  color: @purple;
   @media (min-width: 550px) {
-    font-size: 36px;
+    font-size: 70px;
     padding-left: 16px;
     padding-right: 16px;
   }
   @media (min-width: 950px) {
-    font-size: 46px;
+    font-size: 96px;
   }
 }
 
@@ -101,10 +106,10 @@ header {
   flex-direction: column;
   padding: 16px;
   position: relative;
-  animation: loadingComplete 700ms linear 3s forwards;
-  @size: 85vmin;
+  animation: loadingComplete 700ms linear 1.5s forwards;
+  @size: 90vmin;
   .logo {
-    font-size: @size*0.6;
+    font-size: @size*0.5;
     margin-bottom: @size / 4;
     position: relative;
     z-index: 2;
@@ -117,45 +122,45 @@ header {
     font-size: @size / 10;
     li {
       position: absolute;
-      animation: fadeIn 250ms linear forwards;
+      opacity: 0;
+      animation: fadeIn 200ms linear forwards;
       &:nth-child(1) {
         bottom: 30%;
         left: 0;
-        animation-delay: 1s;
+        animation-delay: 0.5s;
       }
       &:nth-child(2) {
         bottom: 7%;
         left: 17%;
-        animation-delay: 1.2s;
+        animation-delay: 0.6s;
       }
       &:nth-child(3) {
         bottom: 0;
         left: 50%;
-        margin-left: -0.5em;
-        animation-delay: 1.4s;
+        margin-left: -0.8em;
+        animation-delay: 0.7s;
       }
       &:nth-child(4) {
         bottom: 7%;
         right: 17%;
-        animation-delay: 1.6s;
+        animation-delay: 0.8s;
       }
       &:nth-child(5) {
         bottom: 30%;
         right: 0;
-        animation-delay: 1.8s;
+        animation-delay: 0.9s;
       }
       a {
         display: block;
         border-radius: 50%;
+        padding: 0.3em;
         background-color: white;
-        box-shadow: 0 0 0 @size / 30 white, 1px 3px 5px @size / 30 fade(@brown, 70%);
+        box-shadow: @shadow;
         &:focus,
         &:hover {
           outline: none;
-          background-color: @brown;
-          box-shadow: 0 0 0 @size / 30 @brown, 1px 3px 5px @size / 30 fade(@brown, 70%);
           .ico {
-            filter: brightness(0) invert(1);
+            filter: hue-rotate(270deg) brightness(1.6);
           }
         }
         .ico {
@@ -176,15 +181,6 @@ header {
       height: @size;
       margin-top: -@size;
       font-size: @size / 10;
-      li {
-        a {
-          box-shadow: 0 0 0 @size / 30 white, 1px 3px 5px @size / 30 fade(@brown, 70%);
-          &:focus,
-          &:hover {
-            box-shadow: 0 0 0 @size / 30 @brown, 1px 3px 5px @size / 30 fade(@brown, 70%);
-          }
-        }
-      }
     }
   }
 }
@@ -234,7 +230,7 @@ section {
     margin-bottom: 100px;
     padding: 16px;
     max-width: 360px;
-    .image { 
+    .image {
       border-radius: 15px;
       background: none;
       padding: 0;
@@ -245,15 +241,16 @@ section {
         max-height: 328px;
         object-fit: cover;
         overflow: hidden;
+        display: block;
       }
     }
     .label {
       text-align: center;
     }
     h3 {
-      font-size: 1.5em;
+      font-size: 3em;
       margin: 0;
-      padding: 0.5em 0 1em;
+      padding: 0 0 16px;
     }
   }
 }
@@ -277,17 +274,19 @@ section {
         width: 15px;
         height: 15px;
         display: inline-block;
-        border-bottom: 1px solid black;
-        border-left: 1px solid black;
+        border-bottom: 1px solid white;
+        border-left: 1px solid white;
       }
       &[data-controls='prev'] {
         left: 16px;
+        padding-left: 6px;
         &::before {
           transform: rotate(45deg);
         }
       }
       &[data-controls='next'] {
         right: 16px;
+        padding-right: 6px;
         &::before {
           transform: rotate(225deg);
         }
@@ -319,16 +318,28 @@ section {
 .modal {
   h2,
   h3 {
-    padding-top: 0.3em;
-    margin-bottom: 1em;
-    margin-top: 0;
+    margin: 0 0 16px;
+    padding: 0;
   }
   section {
     margin-bottom: 0;
+    text-align: center;
+    p {
+      font-size: 18px;
+      margin: 0;
+    }
+    button {
+      margin-top: 16px;
+    }
   }
   .carousel {
     img {
       width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      display: block;
+      border-radius: 15px;
+      overflow: hidden;
     }
   }
 }

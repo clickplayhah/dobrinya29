@@ -181,9 +181,9 @@ body {
   clip: rect(0 0 0 0);
 }
 button {
-  background: linear-gradient(135deg, #ffd9d9 0%, #fffe7f 50%, #fffe7f 50%, #a7f6ff 100%);
+  background: #9756ff;
   border: none;
-  color: black;
+  color: white;
   border-radius: 40px;
   text-transform: uppercase;
   font-size: 12px;
@@ -192,12 +192,13 @@ button {
   min-width: 200px;
   outline: none;
   transition: all 150ms linear;
+  font-size: 1em;
   cursor: pointer;
 }
 button:hover,
 button:focus {
-  background: linear-gradient(135deg, #ffd9d9 0%, #fffe7f 30%, #fffe7f 70%, #a7f6ff 100%);
-  box-shadow: 0 0 20px 0 #fffe7f;
+  background: #4c18a0;
+  box-shadow: 0 0 20px 0 #a7f6ff;
 }
 button:disabled {
   background-color: gray;
@@ -215,19 +216,20 @@ ol {
 h1,
 h2,
 h3 {
+  font-family: 'Amatic SC', cursive;
   text-align: center;
   text-decoration: none;
-  padding-top: 100px;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 50px;
   margin: 2em 0;
+  color: #4c18a0;
 }
 @media (min-width: 550px) {
   h1,
   h2,
   h3 {
-    font-size: 36px;
+    font-size: 70px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -236,7 +238,7 @@ h3 {
   h1,
   h2,
   h3 {
-    font-size: 46px;
+    font-size: 96px;
   }
 }
 .slider li {
@@ -256,66 +258,66 @@ header {
   flex-direction: column;
   padding: 16px;
   position: relative;
-  animation: loadingComplete 700ms linear 3s forwards;
+  animation: loadingComplete 700ms linear 1.5s forwards;
 }
 header .logo {
-  font-size: 51vmin;
-  margin-bottom: 21.25vmin;
+  font-size: 45vmin;
+  margin-bottom: 22.5vmin;
   position: relative;
   z-index: 2;
 }
 header ul {
   position: relative;
-  width: 85vmin;
-  height: 85vmin;
-  margin-top: -85vmin;
-  font-size: 8.5vmin;
+  width: 90vmin;
+  height: 90vmin;
+  margin-top: -90vmin;
+  font-size: 9vmin;
 }
 header ul li {
   position: absolute;
-  animation: fadeIn 250ms linear forwards;
+  opacity: 0;
+  animation: fadeIn 200ms linear forwards;
 }
 header ul li:nth-child(1) {
   bottom: 30%;
   left: 0;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 header ul li:nth-child(2) {
   bottom: 7%;
   left: 17%;
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
 }
 header ul li:nth-child(3) {
   bottom: 0;
   left: 50%;
-  margin-left: -0.5em;
-  animation-delay: 1.4s;
+  margin-left: -0.8em;
+  animation-delay: 0.7s;
 }
 header ul li:nth-child(4) {
   bottom: 7%;
   right: 17%;
-  animation-delay: 1.6s;
+  animation-delay: 0.8s;
 }
 header ul li:nth-child(5) {
   bottom: 30%;
   right: 0;
-  animation-delay: 1.8s;
+  animation-delay: 0.9s;
 }
 header ul li a {
   display: block;
   border-radius: 50%;
+  padding: 0.3em;
   background-color: white;
-  box-shadow: 0 0 0 2.83333333vmin white, 1px 3px 5px 2.83333333vmin rgba(153, 101, 51, 0.7);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 header ul li a:focus,
 header ul li a:hover {
   outline: none;
-  background-color: #996533;
-  box-shadow: 0 0 0 2.83333333vmin #996533, 1px 3px 5px 2.83333333vmin rgba(153, 101, 51, 0.7);
 }
 header ul li a:focus .ico,
 header ul li a:hover .ico {
-  filter: brightness(0) invert(1);
+  filter: hue-rotate(270deg) brightness(1.6);
 }
 header ul li a .ico {
   display: block;
@@ -331,13 +333,6 @@ header ul li a .ico {
     height: 470px;
     margin-top: -470px;
     font-size: 47px;
-  }
-  header ul li a {
-    box-shadow: 0 0 0 15.66666667px white, 1px 3px 5px 15.66666667px rgba(153, 101, 51, 0.7);
-  }
-  header ul li a:focus,
-  header ul li a:hover {
-    box-shadow: 0 0 0 15.66666667px #996533, 1px 3px 5px 15.66666667px rgba(153, 101, 51, 0.7);
   }
 }
 @keyframes loadingComplete {
@@ -398,14 +393,15 @@ section .container {
   max-height: 328px;
   object-fit: cover;
   overflow: hidden;
+  display: block;
 }
 .catalog .item .label {
   text-align: center;
 }
 .catalog .item h3 {
-  font-size: 1.5em;
+  font-size: 3em;
   margin: 0;
-  padding: 0.5em 0 1em;
+  padding: 0 0 16px;
 }
 .tns-outer {
   position: relative;
@@ -427,17 +423,19 @@ section .container {
   width: 15px;
   height: 15px;
   display: inline-block;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
 }
 .tns-outer .tns-controls button[data-controls='prev'] {
   left: 16px;
+  padding-left: 6px;
 }
 .tns-outer .tns-controls button[data-controls='prev']::before {
   transform: rotate(45deg);
 }
 .tns-outer .tns-controls button[data-controls='next'] {
   right: 16px;
+  padding-right: 6px;
 }
 .tns-outer .tns-controls button[data-controls='next']::before {
   transform: rotate(225deg);
@@ -461,15 +459,27 @@ section .container {
 }
 .modal h2,
 .modal h3 {
-  padding-top: 0.3em;
-  margin-bottom: 1em;
-  margin-top: 0;
+  margin: 0 0 16px;
+  padding: 0;
 }
 .modal section {
   margin-bottom: 0;
+  text-align: center;
+}
+.modal section p {
+  font-size: 18px;
+  margin: 0;
+}
+.modal section button {
+  margin-top: 16px;
 }
 .modal .carousel img {
   width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 15px;
+  overflow: hidden;
 }
 @keyframes fadeIn {
   from {
@@ -519,6 +529,7 @@ section .container {
   cursor: pointer;
   outline: none;
   min-width: 3em;
+  box-shadow: none;
 }
 .modal .dialog .dialog-close::before,
 .modal .dialog .dialog-close::after {

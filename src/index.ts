@@ -69,43 +69,45 @@ document.addEventListener('DOMContentLoaded', () => {
         return (
           acc +
           `<li>
-            <img src="assets/images/Медведи/${options.bear.name}-${options.bear.size}/${color}.jpg" 
-            alt="${options.bear.name} ${options.bear.size}" />
-              <p>${color}</p>
-              <button data-modal="form" data-bear="${options.bear.name +
-                options.bear.size}" data-color="${color}">Выбрать</button>
+            <p>${color}</p>
+            <img src="assets/images/Медведи/${options.bear.name}-${options.bear.size}/${color}.jpg"
+             alt="${options.bear.name} ${options.bear.size}" />
+            <button data-modal="form" data-bear="${options.bear.name + options.bear.size}"
+             data-color="${color}">Выбрать</button>
           </li>`
         );
       }, '');
       return `
-        <h2>${options.bear.name} ${options.bear.size}см</h2>
+        <h2>${options.bear.name} &mdash; ${options.bear.size}см</h2>
+        <p>Выберите цвет:</p>
         <ul class="carousel">${list}</ul>`;
     },
     bear: (options: { bear: Bear }) => `
         <div class="item" >
           <h3>${options.bear.name} ${options.bear.size}см</h3>
           <button class="image" data-modal="select" data-bear="${options.bear.name + options.bear.size}">
-            <img src="assets/images/Медведи/${options.bear.name}-${options.bear.size}/${options.bear.colors[0]}.jpg" 
+            <img src="assets/images/Медведи/${options.bear.name}-${options.bear.size}/${options.bear.colors[0]}.jpg"
              alt="${options.bear.name} ${options.bear.size}" />
           </button>
           <div class="label">
             <p>${options.bear.price} &#8381;</p>
             <button data-modal="select" data-bear="${options.bear.name + options.bear.size}">Выбрать</div>
           </div>
-        </button>`,
+        </button>`
   };
 
-  const findModals = (element: HTMLElement | Document) => {
+  const findModals = (element: Element | Document) => {
     element.querySelectorAll('[data-modal]').forEach((button: HTMLElement) => {
       const options = {
         bear: dataService.bears.find(bear => bear.name + bear.size === button.dataset.bear),
-        color: button.dataset.color,
+        color: button.dataset.color
       };
       const modalTemplate = templates[button.dataset.modal](options);
       if (modalTemplate) {
         let slider: TinySliderInstance;
         const modal = new Modal(modalTemplate, {
           onOpen() {
+            findModals(modal.template);
             const sliderContainer = modal.template.querySelector('.carousel');
             if (sliderContainer) {
               slider = tns({
@@ -113,9 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 items: 1,
                 controls: true,
                 nav: false,
+                gutter: 16,
                 mouseDrag: true,
                 // @ts-ignore
-                preventScrollOnTouch: 'auto',
+                preventScrollOnTouch: 'auto'
               });
             }
           },
@@ -123,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (slider) {
               slider.destroy();
             }
-          },
+          }
         });
         button.addEventListener('click', () => {
           modal.open();
@@ -157,20 +160,20 @@ document.addEventListener('DOMContentLoaded', () => {
     preventScrollOnTouch: 'auto',
     responsive: {
       600: {
-        items: 2,
+        items: 2
       },
       1000: {
-        items: 3,
+        items: 3
       },
       1400: {
-        items: 4,
+        items: 4
       },
       1800: {
-        items: 5,
+        items: 5
       },
       2200: {
-        items: 6,
-      },
-    },
+        items: 6
+      }
+    }
   });
 });
