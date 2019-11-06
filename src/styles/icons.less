@@ -6,23 +6,29 @@
   vertical-align: middle;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   &.logo {
-    background-image: url('../assets/icons/logo.svg');
+    background-image: data-uri('../assets/icons/logo.svg');
   }
   &.vk {
-    background-image: url('../assets/icons/vk.svg');
+    background-image: data-uri('../assets/icons/vk.svg');
   }
   &.instagram {
-    background-image: url('../assets/icons/instagram.svg');
+    background-image: data-uri('../assets/icons/instagram.svg');
   }
   &.telegram {
-    background-image: url('../assets/icons/telegram.svg');
+    background-image: data-uri('../assets/icons/telegram.svg');
   }
   &.whatsapp {
-    background-image: url('../assets/icons/whatsapp.svg');
+    background-image: data-uri('../assets/icons/whatsapp.svg');
   }
   &.phone {
-    background-image: url('../assets/icons/phone.svg');
+    background-image: data-uri('../assets/icons/phone.svg');
+  }
+  &.ruble {
+    background-image: data-uri('../assets/icons/ruble.svg');
+    background-size: contain;
+    vertical-align: top;
   }
 }

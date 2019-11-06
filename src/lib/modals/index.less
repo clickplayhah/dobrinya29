@@ -8,7 +8,8 @@
   height: 100vh;
   z-index: 1000;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   overflow-y: auto;
   background: fade(white, 80%);
@@ -25,6 +26,7 @@
     border: none;
     color: black;
     font-weight: 300;
+    animation: zoom 250ms ease-in-out;
 
     .dialog-close {
       position: absolute;
@@ -32,6 +34,7 @@
       right: 0;
       width: 3em;
       height: 3em;
+      padding: 0;
       background: none;
       border: none;
       cursor: pointer;
@@ -76,5 +79,13 @@
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }

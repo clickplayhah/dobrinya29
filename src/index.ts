@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
              alt="${options.bear.name} ${options.bear.size}" />
           </button>
           <div class="label">
-            <p>${options.bear.price} &#8381;</p>
+            <p>${options.bear.price} <span class="ico ruble"></span></p>
             <button data-modal="select" data-bear="${options.bear.name + options.bear.size}">Выбрать</div>
           </div>
         </button>`
@@ -159,20 +159,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // @ts-ignore
     preventScrollOnTouch: 'auto',
     responsive: {
-      600: {
+      550: {
         items: 2
       },
-      1000: {
+      950: {
         items: 3
-      },
-      1400: {
-        items: 4
-      },
-      1800: {
-        items: 5
-      },
-      2200: {
-        items: 6
       }
     }
   });
