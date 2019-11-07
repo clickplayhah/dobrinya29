@@ -55,7 +55,8 @@ export class AppComponent {
   }
 
   getCountOfReviews() {
-    this.reviewsCount = Math.floor(window.innerWidth / 300);
+    const rc = Math.floor(window.innerWidth / 300);
+    this.reviewsCount = rc > 3 ? 3 : rc;
   }
 
   submitForm(form: FormGroup) {
