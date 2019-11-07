@@ -15,13 +15,23 @@
 * {
   box-sizing: border-box;
 }
+html {
+  &:before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    background: data-uri('./assets/icons/gackground.svg') center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
 
 body {
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
-  background: data-uri('./assets/icons/gackground.svg') center;
-  background-size: cover;
-  background-attachment: fixed;
   font-size: 16px;
 }
 
@@ -68,6 +78,10 @@ img {
   object-fit: contain;
 }
 
+[hidden] {
+  display: none !important;
+} 
+
 menu,
 ul,
 ol {
@@ -109,7 +123,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 16px;
+  padding: 32px 16px 16px;
   position: relative;
   animation: loadingComplete 700ms linear 1.5s forwards;
   @size: 90vmin;
@@ -161,16 +175,15 @@ header {
         padding: 0.3em;
         background-color: white;
         box-shadow: @shadow;
-        &:focus,
-        &:hover {
-          outline: none;
-          .ico {
-            filter: hue-rotate(270deg) brightness(1.6);
-          }
-        }
-        .ico {
+        outline: none;
+
+        .icon {
           display: block;
-          filter: hue-rotate(270deg);
+          color: @purple;
+        }
+
+        &:hover {
+          background-color: @bg-red;
         }
       }
     }
@@ -260,6 +273,7 @@ section {
       background: none;
       padding: 0;
       overflow: hidden;
+      box-shadow: none;
       img {
         width: 100%;
         height: 100%;
