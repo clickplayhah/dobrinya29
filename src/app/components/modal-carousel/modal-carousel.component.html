@@ -1,0 +1,7 @@
+<div class="slider-container" #container>
+  <ul class="slider" #slider [ngStyle]="{ width: (slider.children.length * 100) / slides + '%' }">
+    <ng-content></ng-content>
+  </ul>
+</div>
+<button class="slider-prev" aria-label="Предыдущий цвет" (click)="prev()"></button>
+<button class="slider-next" aria-label="Следующий цвет" (click)="next()"></button>
