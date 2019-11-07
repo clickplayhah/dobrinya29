@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/clickplayhah/dobrinya29#readme",
   "dependencies": {
+    "pageable": "^0.6.8",
     "tiny-slider": "^2.9.2"
   },
   "devDependencies": {
